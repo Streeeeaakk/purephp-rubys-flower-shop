@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2023 at 08:40 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Jun 19, 2023 at 03:54 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_company`
+-- Database: `oldcomp`
 --
 
 -- --------------------------------------------------------
@@ -48,7 +48,8 @@ INSERT INTO `user` (`user_ID`, `user_level`, `user_email`, `user_password`, `use
 (1, 0, 'admin', 'rosesflowershop', 'Admin', 'Admin', 'A', 'Male', '09455114824', '2001-06-22'),
 (6, 1, 'jl.streak7@gmail.com', 'bjpoito', 'Jullian Lance', 'Manas', 'A', 'Male', '+639455114825', '2001-06-22'),
 (9, 1, 'angelo@geronimo.com', 'angelo', 'Angelo', 'Mañas', 'C', 'Male', '+639455114825', '0123-03-12'),
-(13, 1, 's2020925@usls.edu.ph', 'bjpoito', 'Lance', 'Mañas', 'A', 'Male', '+639455114825', '2001-06-22');
+(13, 1, 's2020925@usls.edu.ph', 'bjpoito', 'Lance', 'Mañas', 'A', 'Male', '+639455114825', '2001-06-22'),
+(14, 1, 'admin@gmail', '9640c14b365c35b6ec9c79d25dba1ec1', 'Jullian', 'Mañas', 'L', 'Male', '+639455114825', '2023-05-23');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `user_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

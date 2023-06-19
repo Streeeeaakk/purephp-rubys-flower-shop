@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2023 at 08:40 AM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Generation Time: Jun 19, 2023 at 03:55 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,50 +18,44 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_company`
+-- Database: `oldcomp`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `profilepicture`
+-- Table structure for table `user_order`
 --
 
-CREATE TABLE `profilepicture` (
-  `profile_ID` int(11) NOT NULL,
+CREATE TABLE `user_order` (
+  `order_ID` int(11) NOT NULL,
   `user_ID` int(11) NOT NULL,
-  `profile_picture` varchar(255) NOT NULL
+  `address_ID` int(11) NOT NULL,
+  `order_paymentMethod` varchar(255) NOT NULL,
+  `order_datePlaced` varchar(255) NOT NULL,
+  `tmp_cart_rand` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `profilepicture`
---
-
-INSERT INTO `profilepicture` (`profile_ID`, `user_ID`, `profile_picture`) VALUES
-(10, 9, 'test.jpg'),
-(11, 6, 'test.jpg'),
-(15, 1, '279866187_5490810370964828_2841373307073751044_n.jpg');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `profilepicture`
+-- Indexes for table `user_order`
 --
-ALTER TABLE `profilepicture`
-  ADD PRIMARY KEY (`profile_ID`),
-  ADD KEY `user_ID` (`user_ID`);
+ALTER TABLE `user_order`
+  ADD PRIMARY KEY (`order_ID`),
+  ADD KEY `user_ID` (`user_ID`,`address_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `profilepicture`
+-- AUTO_INCREMENT for table `user_order`
 --
-ALTER TABLE `profilepicture`
-  MODIFY `profile_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+ALTER TABLE `user_order`
+  MODIFY `order_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
